@@ -1,6 +1,9 @@
 py-check-updates
 ================
 
+[![Test](https://github.com/tueda/py-check-updates/workflows/Test/badge.svg?branch=main)](https://github.com/tueda/py-check-updates/actions?query=branch:main)
+[![PyPI version](https://badge.fury.io/py/py-check-updates.svg)](https://pypi.org/project/py-check-updates/)
+
 This is a dependency update checker to assist Python package developers.
 
 If you are the kind of paranoid person who checks whether packages
