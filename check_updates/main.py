@@ -23,7 +23,8 @@ def check_updates(
         "_build",
         "build",
         "CVS",
-        "dist" "node_modules",
+        "dist",
+        "node_modules",
         "target",
         r"\..*",
     ]
