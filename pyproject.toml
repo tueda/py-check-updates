@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "py-check-updates"
-version = "0.0.1-alpha.0"
+version = "0.0.1rc1"
 description = "A Python dependency update checker."
 authors = ["Takahiro Ueda <takahiro.ueda@yahoo.com>"]
 license = "MIT"
