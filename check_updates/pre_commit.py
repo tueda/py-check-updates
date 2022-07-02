@@ -176,8 +176,11 @@ def analyze_pre_commit_hooks(name: str, rev: str) -> PreCommitHooksStruct:
 
 def _get_pre_commit_hook_impl(name: str, rev: str) -> str:
     github_prefix = "https://github.com/"
+    gitlab_prefix = "https://gitlab.com/"
     if name.lower().startswith(github_prefix):
         url = f"https://raw.githubusercontent.com/{name[len(github_prefix):]}/{rev}"
+    elif name.lower().startswith(gitlab_prefix):
+        url = f"https://gitlab.com/{name[len(gitlab_prefix):]}/-/raw/{rev}"
     else:
         return ""
 
