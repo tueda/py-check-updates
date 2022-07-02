@@ -114,7 +114,8 @@ def _parse_hook(
                 and isinstance(value, yaml.ScalarNode)
             ):
                 hook_id = value.value
-                hook_language = languages.languages[hook_id]
+                if hook_id in languages.languages:
+                    hook_language = languages.languages[hook_id]
             elif (
                 isinstance(key, yaml.ScalarNode)
                 and key.value == "additional_dependencies"
