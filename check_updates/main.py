@@ -5,7 +5,7 @@ import re
 from pathlib import Path
 from typing import Optional, Sequence, Tuple, Union
 
-from . import poetry, pre_commit
+from . import __version__, poetry, pre_commit
 from .update import FileContent, Update
 
 
@@ -72,8 +72,15 @@ def main(args: Optional[Sequence[Union[str, Path]]] = None) -> None:
         prog="py-check-updates",
         usage=("%(prog)s [options] [--] [file/dir ...]"),
     )
+    parser.add_argument(
+        "--version", "-V", action="store_true", help="show program's version and exit"
+    )
     parser.add_argument("path", nargs="*", help=argparse.SUPPRESS)
     opts = parser.parse_args(args=[str(f) for f in args] if args is not None else None)
+
+    if opts.version:
+        print(f"{parser.prog} {__version__}")
+        return
 
     is_first = True
     for updates, content in check_updates(opts.path if opts.path else None):

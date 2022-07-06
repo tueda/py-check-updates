@@ -39,3 +39,9 @@ tests/data/configs/pre-commit/simple/.pre-commit-config.yaml:
     line:9  flake8-bugbear  21.9.2  22.6.22
 """
     )
+
+
+def test_version(capsys: pytest.CaptureFixture[str]) -> None:
+    check_updates.main(["--version"])
+    captured = capsys.readouterr()
+    assert captured.out.strip() == f"py-check-updates {check_updates.__version__}"
