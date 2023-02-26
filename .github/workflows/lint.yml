@@ -4,6 +4,8 @@ on:
   push:
   pull_request:
   workflow_dispatch:
+  schedule:
+    - cron: 0 0 1 * * # monthly
 
 jobs:
   gitlint:
@@ -14,7 +16,7 @@ jobs:
 
       # for pip cache
       - name: Create requirements.txt
-        uses: 1arp/create-a-file-action@0.2
+        uses: fertrig/create-file-action@1.0.2
         with:
           file: "requirements.txt"
           content: "gitlint"
@@ -39,7 +41,7 @@ jobs:
 
       # for pip cache
       - name: Create requirements.txt
-        uses: 1arp/create-a-file-action@0.2
+        uses: fertrig/create-file-action@1.0.2
         with:
           file: "requirements.txt"
           content: "pre-commit"
