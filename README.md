@@ -4,7 +4,6 @@ py-check-updates
 [![Test](https://github.com/tueda/py-check-updates/workflows/Test/badge.svg?branch=main)](https://github.com/tueda/py-check-updates/actions?query=branch:main)
 [![PyPI version](https://badge.fury.io/py/py-check-updates.svg)](https://pypi.org/project/py-check-updates/)
 [![Codecov](https://codecov.io/gh/tueda/py-check-updates/branch/main/graph/badge.svg)](https://codecov.io/gh/tueda/py-check-updates)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/tueda/py-check-updates.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/tueda/py-check-updates/context:python)
 
 This is a dependency update checker to assist Python package developers.
 
