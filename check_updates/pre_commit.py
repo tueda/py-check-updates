@@ -56,7 +56,7 @@ def analyze_pre_commit_config(
     """Analyze the given pre-commit config file."""
     text = Path(filename).read_text()
     lines = tuple(text.splitlines())
-    root_node: yaml.Node = yaml.compose(text)  # type: ignore[no-untyped-call]
+    root_node: yaml.Node = yaml.compose(text)
     packages: List[PreCommitConfigPackage] = []
 
     if isinstance(root_node, yaml.MappingNode):

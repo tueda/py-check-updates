@@ -36,7 +36,6 @@ def test_update_pyproject(mocker: MockerFixture) -> None:
 
 
 def test_analyze_pyproject() -> None:
-
     filename = str(Path(__file__).parent / "data/configs/poetry/simple/pyproject.toml")
     lines = tuple(Path(filename).read_text().splitlines())
 
