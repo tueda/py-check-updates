@@ -12,5 +12,5 @@ def get_latest_version(name: str) -> str:
 
 @functools.lru_cache(maxsize=None)
 def _get_latest_version_impl(name: str) -> str:
-    r = requests.get(f"https://pypi.org/pypi/{name}/json")
+    r = requests.get(f"https://pypi.org/pypi/{name}/json", timeout=10)
     return r.json()["info"]["version"]  # type: ignore[no-any-return]

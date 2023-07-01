@@ -184,5 +184,5 @@ def _get_pre_commit_hook_impl(name: str, rev: str) -> str:
     else:
         return ""
 
-    r = requests.get(f"{url}/.pre-commit-hooks.yaml")
+    r = requests.get(f"{url}/.pre-commit-hooks.yaml", timeout=10)
     return r.text
